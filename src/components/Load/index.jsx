@@ -2,10 +2,15 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 
-const Animation = keyframes`
-  0% { margin-bottom: 0; }
-  50% { margin-bottom: 15px }
-  100% { margin-bottom: 0 }
+const LoadAnimation = keyframes`
+  0%{
+    margin-bottom: 0;
+    }50%{ 
+    margin-bottom: 15px;
+    box-shadow: 4px 5px 4px #050505;
+    }100%{ 
+    margin-bottom: 0;
+    }
 `;
 const LoadDiv = styled.div`
   display: flex;
@@ -19,17 +24,16 @@ const Circle = styled.div`
   width: 30px;
   height: 30px;
   margin: 0 3px;
-  animation: ${Animation} 0.7s linear infinite;
+  animation: ${LoadAnimation} 0.7s linear infinite;
   animation-delay: ${props => props.delay};
 `;
 
 export default function Load(){
-
   return (
       <LoadDiv>
           <Circle delay="0s" />
-          <Circle delay=".1s" />
-          <Circle delay=".2s" />
+          <Circle delay="0.2s" />
+          <Circle delay="0.4s" />
       </LoadDiv>
   )
 }
