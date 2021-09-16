@@ -57,7 +57,18 @@ Para prosseguir faça um Fork desse projeto para utilizá-lo como base no teste.
 Responda as perguntas abaixo com suas próprias palavras, mas também fique livre em aplicar algum desses conceitos na primeira parte do teste.
 
 - Se uma rota é repetida diversas vezes em sua aplicação, como seria possível melhorar a arquitetura para facilitar em manutenções posteriores?
+
+`R: Código repetido não é uma boa prática, sendo assim você pode criar uma maneira de reutiliza-lo, neste caso, poderia colocar em um mesmo arquivo para que fosse reutiliza-lo.`
+
 - É possível melhorar a performance da solução? Como as melhorias impactam a leitura e manutenção do código?
+
+`R: Um código limpo pode auxiliar na manutenção e melhor visibilidade, gastaria menos tempo tentando decifrar o código. Funções explicativas, simples e claras; Utilizar o DRY (Don't Repeat Yourself). `
+
 - De que forma o sistema pode escalar com a arquitetura planejada?
+
+`R:`
+
 - Considerando as informações de retorno nas rotas da API disponibilizada para o teste, qual seria a sua sugestão para o controller que alimentaria essas rotas? Leve em consideração os conhecimentos de RESTful API.
+
+`R: Poderia também fazer uma requisição get para retornar por categorias.fazendo um SELECT * FROM produtos where categoria = ?, e assim pegar somente aquelas categorias paassando como /produto/categoria/:categoria... também poderia fazer a verificação de entrada dos parametros. Além de retornar um erro caso são seja encontrado nenhum id quando pesquisa por um id inválido (percebi que retorna: "").`
 
